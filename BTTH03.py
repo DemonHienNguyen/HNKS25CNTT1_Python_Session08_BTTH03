@@ -215,35 +215,10 @@ while True:
             else:
                 print()
                 blind = "*"*5
-                while True:                
-                    from_phone_input = input("Vui lòng nhập Số điện thoại người gửi: ")
-                    if(not from_phone_input):
-                        print("Số điện thoại không được rỗng")
-                    elif(from_phone_input.isspace()):
-                        print("số điện thoại không được chứa khoảng trắng")
-                    elif(len(from_phone_input) != 10):
-                        print("Số điện thoại không được để trống")
-                    elif(not from_phone_input.isdigit()):
-                        print("Số điện thoại chỉ được chứa số")
-                    else:
-                        break
-                    
-                while True:                
-                    to_phone_input = input("Vui lòng nhập Số điện thoại người nhận: ")
-                    if(not to_phone_input):
-                        print("Số điện thoại không được rỗng")
-                    elif(to_phone_input.isspace()):
-                        print("số điện thoại không được chứa khoảng trắng")
-                    elif(len(to_phone_input) != 10):
-                        print("Số điện thoại không được để trống")
-                    elif(not to_phone_input.isdigit()):
-                        print("Số điện thoại chỉ được chứa số")
-                    else:
-                        break
                 print("Output")
                 print(
-                    f"SĐT người gửi: {from_phone_input[0:3] + blind + from_phone_input[-2:]} \n"
-                    f"SĐT người nhận: {to_phone_input[0:3] + blind + to_phone_input[-2:]} \n"
+                    f"SĐT người gửi: {sender_phone_number[0:3] + blind + sender_phone_number[-2:]} \n"
+                    f"SĐT người nhận: {recipient_phone_number[0:3] + blind + recipient_phone_number[-2:]} \n"
                 )
                 print()
         case 4:
